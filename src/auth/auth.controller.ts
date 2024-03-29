@@ -67,7 +67,7 @@ export class AuthController {
   // @SetMetadata('roles', ['admin','super-user'])
 
   @Get('private2')
-  @RoleProtected( ValidRoles.superUser, ValidRoles.admin )
+  @RoleProtected( ValidRoles.ADMINISTRADOR, ValidRoles.SOPORTE )
   @UseGuards( AuthGuard(), UserRoleGuard )
   privateRoute2(
     @GetUser() user: User
@@ -81,7 +81,7 @@ export class AuthController {
 
 
   @Get('private3')
-  @Auth( ValidRoles.admin )
+  @Auth( ValidRoles.ADMINISTRADOR )
   privateRoute3(
     @GetUser() user: User
   ) {
