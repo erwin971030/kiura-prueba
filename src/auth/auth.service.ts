@@ -38,7 +38,7 @@ export class AuthService {
 
       return {
         ...user,
-        token: this.getJwtToken({ id: `${user.id}` })
+        token: this.getJwtToken({ id: user.id })
       };
       // TODO: Retornar el JWT de acceso
 
@@ -65,7 +65,7 @@ export class AuthService {
 
     return {
       ...user,
-      token: this.getJwtToken({ id: `${user.id}` })
+      token: this.getJwtToken({ id: user.id })
     };
   }
 
@@ -73,7 +73,7 @@ export class AuthService {
 
     return {
       ...user,
-      token: this.getJwtToken({ id: `${user.id}` })
+      token: this.getJwtToken({ id: user.id })
     };
 
   }

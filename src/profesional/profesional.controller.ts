@@ -7,7 +7,9 @@ import { Auth } from 'src/auth/decorators/auth.decorator';
 import { GetUser } from 'src/auth/decorators/get-user.decorator';
 import { User } from 'src/auth/entities/user.entity';
 import { ValidRoles } from 'src/auth/interfaces/valid-roles';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Profesinal')
 @Controller('profesional')
 export class ProfesionalController {
   constructor(private readonly profesionalService: ProfesionalService) {}

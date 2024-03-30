@@ -1,31 +1,32 @@
 import { Comment } from '../../profesional/entities/comment.entity';
-import { Column, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
+@Entity()
 export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column('text', {
+    @Column({
         unique: true
     })
     email: string;
 
-    @Column('text', {
+    @Column('varchar', {
         select: false
     })
     password: string;
 
-    @Column('text')
+    @Column('varchar')
     fullName: string;
 
-    @Column('bool', {
+    @Column('boolean', {
         default: true
     })
     isActive: boolean;
 
-    @Column('text', {
-        array: true,
-        default: ['user']
+    @Column('varchar', {
+        unique: true,
+        default: 'Usuario Normal'
     })
     roles: string[];
 

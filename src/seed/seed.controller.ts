@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { SeedService } from './seed.service';
 import { CreateSeedDto } from './dto/create-seed.dto';
 import { UpdateSeedDto } from './dto/update-seed.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Seed')
 @Controller('seed')
 export class SeedController {
   constructor(private readonly seedService: SeedService) {}
