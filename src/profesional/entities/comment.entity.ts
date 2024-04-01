@@ -22,7 +22,7 @@ export class Comment{
     @Column('integer')
     starts: number;
 
-    @Column('varchar', {unique:true})
+    @Column('varchar', {nullable: false})
     comment: string;
 
 }

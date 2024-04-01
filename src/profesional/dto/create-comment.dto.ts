@@ -1,16 +1,18 @@
-import { User } from "src/auth/entities/user.entity";
-import { Profesional } from "../entities/profesional.entity";
 import { ApiProperty } from "@nestjs/swagger";
+import { IsNumber, IsString } from "class-validator";
 
 export class CreateCommentDto{
 
     @ApiProperty()
+    @IsString()
     title: string;
     
     @ApiProperty()
+    @IsNumber()
     starts: number;
     
     @ApiProperty()
+    @IsString()
     comment: string;
 
     // @ApiProperty()

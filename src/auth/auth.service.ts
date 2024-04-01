@@ -8,7 +8,7 @@ import * as bcrypt from 'bcrypt';
 import { User } from './entities/user.entity';
 import { JwtPayload } from './interfaces/jwt-payload.interface';
 import { CreateUserDto } from './dto/create-user.dto';
-import { LoginUserDto } from './dto/update-auth.dto';
+import { LoginUserDto } from './dto/login-user.dto';
 
 
 @Injectable()

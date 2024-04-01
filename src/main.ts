@@ -16,6 +16,7 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Servicios profesionales RESTFul API')
     .setDescription('Servicios profesionales')
     .setVersion('1.0')

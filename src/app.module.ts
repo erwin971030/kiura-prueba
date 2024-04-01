@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
-import { CategoryModule } from './category/category.module';
 import { ProfesionalModule } from './profesional/profesional.module';
 import { SeedModule } from './seed/seed.module';
 
@@ -22,8 +21,6 @@ import { SeedModule } from './seed/seed.module';
     }),
 
     AuthModule,
-
-    CategoryModule,
 
     ProfesionalModule,
 

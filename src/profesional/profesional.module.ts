@@ -13,6 +13,10 @@ import { Certificates } from './entities/certificates.entity';
   imports: [
     TypeOrmModule.forFeature([ Profesional, Comment, Certificates ]),
     AuthModule
+  ],
+  exports: [
+    ProfesionalService,
+    TypeOrmModule
   ]
 })
 export class ProfesionalModule {}

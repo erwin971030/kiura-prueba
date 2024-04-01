@@ -4,8 +4,7 @@ import { RoleProtected } from './decorators/role-protected.decorator';
 
 import { Controller, Get, Post, Body, UseGuards, Req, Headers } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
-import { ApiTags } from '@nestjs/swagger';
-import { LoginUserDto } from './dto/update-auth.dto';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { Auth } from './decorators/auth.decorator';
 import { GetUser } from './decorators/get-user.decorator';
 import { User } from './entities/user.entity';
@@ -14,7 +13,9 @@ import { RawHeaders } from './decorators/raw-headers.decorator';
 import { IncomingHttpHeaders } from 'http';
 import { ValidRoles } from './interfaces/valid-roles';
 import { UserRoleGuard } from './guards/user-role-guard';
+import { LoginUserDto } from './dto/login-user.dto';
 
+@ApiBearerAuth()
 @ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
