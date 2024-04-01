@@ -25,4 +25,4 @@
     http://localhost:3000/api
     ```
 
-8. Ejecutar primero el Seeder para cargar los datos a la Base de datos (Lo encontraras en Swagger luego de entrar al punto 7).
+8. Ejecutar primero el Seeder para cargar los datos a la Base de datos (Lo encontraras en Swagger).
